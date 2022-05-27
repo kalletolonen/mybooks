@@ -1,0 +1,11 @@
+
+<h1>Book listing</h1>
+
+{% for book in object_list %}
+
+	<p>Title: {{ book.title }}</p>
+	<p>Author: {{ book.author.name }}</p>
+	<p>Genre: {{ book.genre.genre }}</p>
+	<br>
+	
+{% endfor %}

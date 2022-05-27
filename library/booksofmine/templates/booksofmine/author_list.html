@@ -1,0 +1,18 @@
+{% extends "booksofmine/base.html" %}
+
+{% block content %}
+
+<h1>Author listing</h1>
+
+{% for author in object_list %}
+
+	<p>Name: <a href="{{ author.get_absolute_url }}">{{ author.name }}</a></p>
+	<p>Country: <a href="{{ author.genre.get_absolute_url }}">{{ author.country }}</a></p>
+	<a href="{{ author.get_absolute_url }}/update">Update</a> - <a href="{{ author.get_absolute_url }}/delete">Delete</a>
+	<br><br>
+	
+{% endfor %}
+
+<a href="/authors/new">Add new</a>
+
+{% endblock content %}

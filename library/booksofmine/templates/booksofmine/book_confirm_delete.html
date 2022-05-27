@@ -1,0 +1,7 @@
+<h1>Delete the book?</h1>
+
+<form method=post>
+	{% csrf_token %}
+	Are you sure you wish to delete "{{ object }}"<br><br>
+	<input type=submit value=Delete>
+<form>

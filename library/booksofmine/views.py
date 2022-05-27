@@ -17,3 +17,9 @@ class BookCreateView(CreateView):
 	fields = "__all__"
 	success_url = "/books"
 
+class BookDeleteView(DeleteView): 
+	model = models.Book
+	success_url = "/books"
+
+class AuthorListView(ListView): 
+	model = models.Author

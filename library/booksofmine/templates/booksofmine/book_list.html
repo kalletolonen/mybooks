@@ -1,3 +1,6 @@
+{% extends "booksofmine/base.html" %}
+
+{% block content %}
 
 <h1>Book listing</h1>
 
@@ -6,8 +9,11 @@
 	<p>Title: <a href="{{ book.get_absolute_url }}">{{ book.title }}</a></p>
 	<p>Author: <a href="{{ book.author.get_absolute_url }}"> {{ book.author.name }}</a></p>
 	<p>Genre: <a href="{{ book.genre.get_absolute_url }}">{{ book.genre.genre }}</a></p>
-	<br>
+	<a href="{{ book.get_absolute_url }}/update">Update</a> - <a href="{{ book.get_absolute_url }}/delete">Delete</a>
+	<br><br>
 	
 {% endfor %}
 
 <a href="/books/new">Add new</a>
+
+{% endblock content %}

@@ -3,9 +3,11 @@
 
 {% for book in object_list %}
 
-	<p>Title: {{ book.title }}</p>
-	<p>Author: {{ book.author.name }}</p>
-	<p>Genre: {{ book.genre.genre }}</p>
+	<p>Title: <a href="{{ book.get_absolute_url }}">{{ book.title }}</a></p>
+	<p>Author: <a href="{{ book.author.get_absolute_url }}"> {{ book.author.name }}</a></p>
+	<p>Genre: <a href="{{ book.genre.get_absolute_url }}">{{ book.genre.genre }}</a></p>
 	<br>
 	
 {% endfor %}
+
+<a href="/books/new">Add new</a>

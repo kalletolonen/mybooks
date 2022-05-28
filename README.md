@@ -5,15 +5,16 @@ Source for exersice [Tero Karvinen](https://terokarvinen.com/2021/python-web-ser
 
 Made by: https://www.linkedin.com/in/kalletolonen/
 
-Project scope:
-CRUD for a book listing
+**Project scope:**
+CRUD for a book listing - **DONE**
 
-Stretch goals:
-LoginRequiredMixin - **DONE**
+**Stretch goals:**
+LoginRequiredMixin - **DONE**  
 CreateView, User, UserForm - **NOT DONE**
 
-Requirements:
+**Requirements:**  
 Django 3.2
+Debian 11
 
 ![1. Main view](1.png)
 

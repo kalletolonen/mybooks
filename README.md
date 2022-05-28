@@ -5,10 +5,10 @@ Source for exersice [Tero Karvinen](https://terokarvinen.com/2021/python-web-ser
 
 Made by: https://www.linkedin.com/in/kalletolonen/
 
-**Project scope:**
-CRUD for a book listing - **DONE**
+**Project scope:**  
+CRUD for a book listing - **DONE**  
 
-**Stretch goals:**
+**Stretch goals:**  
 LoginRequiredMixin - **DONE**  
 CreateView, User, UserForm - **NOT DONE**
 

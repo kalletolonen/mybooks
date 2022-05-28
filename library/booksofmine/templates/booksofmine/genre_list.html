@@ -1,0 +1,17 @@
+{% extends "booksofmine/base.html" %}
+
+{% block content %}
+
+<h1>Genre listing</h1>
+
+{% for genre in object_list %}
+
+	<p>Genre: <a href="{{ genre.get_absolute_url }}">{{ genre.genre }}</a></p>
+	<a href="{{ genre.get_absolute_url }}/update">Update</a> - <a href="{{ genre.get_absolute_url }}/delete">Delete</a>
+	<br><br>
+	
+{% endfor %}
+
+<a href="/genres/new">Add new</a>
+
+{% endblock content %}

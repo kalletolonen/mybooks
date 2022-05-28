@@ -1,0 +1,13 @@
+{% extends "booksofmine/base.html" %}
+
+	{% block content %}
+	<h1>Delete {{ object.name }}?</h1>
+
+	<form method=post>
+			{% csrf_token %}
+			Are you sure you wish to delete "{{ object.name }}"<br><br>
+			This will delete all their books too and this can't be undone.<br><br>
+			<input type=submit value=Delete>
+	</form>
+	{% endblock content %}
+

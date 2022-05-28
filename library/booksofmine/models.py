@@ -10,7 +10,6 @@ class Book(models.Model):
 
     def get_absolute_url(self):
         return f"/books/{self.pk}" 
-
             
 class Author(models.Model):
     name = models.CharField(max_length=300, default="")

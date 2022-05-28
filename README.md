@@ -13,7 +13,7 @@ LoginRequiredMixin - **DONE**
 CreateView, User, UserForm - **NOT DONE**
 
 **Requirements:**  
-Django 3.2
+Django 3.2  
 Debian 11
 
 ![1. Main view](1.png)

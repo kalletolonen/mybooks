@@ -44,7 +44,6 @@ class Author(models.Model):
     def get_absolute_url(self):
         return f"/authors/{self.pk}" 
 
-
 class Genre(models.Model):
     genre = models.CharField(max_length=300, unique=True)
     
@@ -53,6 +52,3 @@ class Genre(models.Model):
 
     def get_absolute_url(self):
         return f"/genres/{self.pk}" 
-
-    
-

@@ -14,13 +14,13 @@ class BookUpdateView(LoginRequiredMixin, UpdateView):
 	success_url = "/books"
 	login_url = '/accounts/login/'
 
-class BookCreateView(CreateView): 
+class BookCreateView(LoginRequiredMixin, CreateView): 
 	model = models.Book
 	fields = "__all__"
 	success_url = "/books"
 	login_url = '/accounts/login/'
 
-class BookDeleteView(DeleteView): 
+class BookDeleteView(LoginRequiredMixin, DeleteView): 
 	model = models.Book
 	success_url = "/books"
 	login_url = '/accounts/login/'
@@ -28,7 +28,7 @@ class BookDeleteView(DeleteView):
 class AuthorListView(ListView): 
 	model = models.Author
 
-class AuthorCreateView(CreateView): 
+class AuthorCreateView(LoginRequiredMixin, CreateView): 
 	model = models.Author
 	fields = "__all__"
 	success_url = "/books"
@@ -37,13 +37,13 @@ class AuthorCreateView(CreateView):
 class AuthorDetailView(DetailView): 
 	model = models.Author
 
-class AuthorUpdateView(UpdateView): 
+class AuthorUpdateView(LoginRequiredMixin, UpdateView): 
 	model = models.Author
 	fields = "__all__"
 	success_url = "/books"
 	login_url = '/accounts/login/'
 
-class AuthorDeleteView(DeleteView): 
+class AuthorDeleteView(LoginRequiredMixin, DeleteView): 
 	model = models.Author
 	success_url = "/books"
 	login_url = '/accounts/login/'
@@ -54,19 +54,19 @@ class GenreListView(ListView):
 class GenreDetailView(DetailView): 
 	model = models.Genre
 
-class GenreUpdateView(UpdateView): 
+class GenreUpdateView(LoginRequiredMixin, UpdateView): 
 	model = models.Genre
 	fields = "__all__"
 	success_url = "/genres"
 	login_url = '/accounts/login/'
 
-class GenreCreateView(CreateView): 
+class GenreCreateView(LoginRequiredMixin, CreateView): 
 	model = models.Genre
 	fields = "__all__"
 	success_url = "/genres"
 	login_url = '/accounts/login/'
 
-class GenreDeleteView(DeleteView): 
+class GenreDeleteView(LoginRequiredMixin, DeleteView): 
 	model = models.Genre
 	success_url = "/genres"
 	login_url = '/accounts/login/'
